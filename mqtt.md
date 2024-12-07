@@ -12,10 +12,9 @@ TLS: **yes**
 
 Authentication: **required**
 
-**Username:** `u_{USER_ID}`, where the user id can be grabbed by cracking your own `{ACCESS_TOKEN}` (which is a JWT) and reading its `preferred_username` field.
+**Username:** `u_{USER_ID}`, user id can be obtained by using [GET /v1/design-user-service/my/preference](https://github.com/Doridian/OpenBambuAPI/blob/main/cloud-http.md#get-v1design-user-servicemypreference) the uid is in the response.
 
-**Password:** `{ACCESS_TOKEN}` (the entire JWT, no prefix or suffix)
-
+**Password:** `{ACCESS_TOKEN}` , this is returned after logging into the bambulab api using [POST https://api.bambulab.com/v1/user-service/user/login](https://github.com/Doridian/OpenBambuAPI/blob/main/cloud-http.md#basics)
 ## Local MQTT server
 
 URL: `mqtt://{PRINTER_IP}:8883`
